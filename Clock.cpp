@@ -16,7 +16,19 @@ viod get_time()
     string hour;
     hour = info[index - 2];
     hour += info[index - 1];
-    cout << hour;
+
+    // Giving Minute in Terminal
+    string minute;
+    minute = info[index + 1];
+    minute += info[index + 2];
+
+    // Giving Second in Terminal
+    string second;
+    second = info[index + 4];
+    second += info[index + 5];
+    
+    // Print Now Clock
+    cout << hour << ":" << minute << ":" << second << endl;
 }
 
 int main()
