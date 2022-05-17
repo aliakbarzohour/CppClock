@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <ctime>
 
-usnig namespace std; 
+usnig namespace std;
 
 viod get_time()
 {
@@ -11,7 +11,12 @@ viod get_time()
     char *dt = ctime(&now);
     info = dt;
 
-    cout << dt;
+    int index = info.find(":");
+    // Giving Hour in Terminal
+    string hour;
+    hour = info[index - 2];
+    hour += info[index - 1];
+    cout << hour;
 }
 
 int main()
